@@ -128,7 +128,7 @@ void output_coefficients(double x1, double x2, int nRoots)
         break;
     }
 }
-
+//tests
 void MainTest()
 {
     double a; double b; double c; double x1; double x2; int nRoots;
@@ -166,13 +166,13 @@ int TestOfSquareEquation(FILE *fp)
 
     if(ExpectedRoots == SEquation(a, b, c, &x1, &x2) && Right_x1 == x1 && Right_x2 == x2)
     {
-        printf("Test ¹ %d passed", NumberOfRightTests);
+        printf("Test ï¿½ %d passed", NumberOfRightTests);
         NumberOfRightTests += 1;
         return 1;
     }
     else
     {
-        printf("Test ¹ %d failed\n", NumberOfRightTests);
+        printf("Test ï¿½ %d failed\n", NumberOfRightTests);
         printf("Expected roots: %lf %lf %d\n", Right_x1, Right_x2, ExpectedRoots);
         printf("Real roots: %lf %lf %d\n", x1, x2, nRoots);
     }
