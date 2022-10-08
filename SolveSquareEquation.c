@@ -9,13 +9,13 @@ if (!(condition))                                     \
 printf("Error in %s in %d\n", #condition, __LINE__);  \
 }                                                     \
 
-void UseProgramm         ();
+void UseProgram         ();
 void InputCoefficients   (double *a, double *b, double *c);
 int  SolveSquareEquation (double a, double b, double c, double *x1, double *x2);
 int  SolveLineEquation   (double b, double c, double *x1);
 void OutputCoefficients  (double x1, double x2, int nRoots);
 
-void TestProgramm        ();
+void TestProgram         ();
 int  OneTestProgram      (FILE *fp);
 
 const double ZERO = 2e-5;
@@ -45,10 +45,10 @@ int main()
     switch(Letter)
     {
         case 'u':
-        UseProgramm();
+        UseProgram();
         break;
         case 't':
-        TestProgramm();
+        TestProgram();
         break;
         default:
         break;  
@@ -60,7 +60,7 @@ return 0;
 void InputCoefficients   (double *a, double *b, double *c)
 {
     printf("Enter coefficients:\n");
-    while(scanf("%lf %lf %lf", a, b, c)!=3 && scanf("%lf %lf %lf", a, b, c) < 4)
+    while(scanf("%lf %lf %lf", a, b, c)!=3 && scanf("%lf %lf %lf", a, b, c) >= 4)
     {
     int BufClear = 0;
        
@@ -70,7 +70,7 @@ void InputCoefficients   (double *a, double *b, double *c)
     }
 }
 
-void UseProgramm()
+void UseProgram()
 {
     double a = NAN;
     double b = NAN;
@@ -157,7 +157,7 @@ void OutputCoefficients  (double x1, double x2, int nRoots)
 
 
 
-void TestProgramm()
+void TestProgram()
 {
     const char *FileName = "ForUnitTest.txt";
     FILE *fp = fopen (FileName, "r");
